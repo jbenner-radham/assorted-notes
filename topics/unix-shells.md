@@ -9,6 +9,7 @@ POSIX Shell
 Z Shell (zsh)
 -------------
 
+- Delete the whole line: <kbd>Ctrl</kbd> + <kbd>U</kbd>
 - Display the attributes and value of all declared variables: `typeset -p`
 - Get a variable type via a parameter expansion flag (`man zshexpn`): `echo "${(t)VARIABLE_NAME}"`
 - Remove duplicates in `$PATH`: `typeset -aU path`
