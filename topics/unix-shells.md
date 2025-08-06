@@ -14,3 +14,5 @@ Z Shell (zsh)
 - Get a variable type via a parameter expansion flag (`man zshexpn`): `echo "${(t)VARIABLE_NAME}"`
 - Remove duplicates in `$PATH`: `typeset -aU path`
 - Unset a function: `unfunction $FUNCTION_NAME`
+- View the manpage for the built-ins: `man zshbuiltins`
+- View the options manpage: `man zshoptions`
