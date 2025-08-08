@@ -51,8 +51,6 @@ print "${PATH}"
 
 path+=("/path/to/bin")
 
-export PATH
-
 print "${PATH}"
 # >>> /usr/bin:/bin:/usr/sbin:/sbin:/path/to/bin
 ```
@@ -65,8 +63,6 @@ print "${PATH}"
 
 path=("/path/to/bin" $path)
 
-export PATH
-
 print "${PATH}"
 # >>> /path/to/bin:/usr/bin:/bin:/usr/sbin:/sbin
 ```
@@ -75,8 +71,6 @@ print "${PATH}"
 
 ```shell
 path+=("/path/to/bin")
-
-export PATH
 
 (( $path[(Ie)/path/to/bin] )) && print 'Found in path!'
 # >>> Found in path!
