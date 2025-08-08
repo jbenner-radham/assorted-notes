@@ -4,7 +4,7 @@ Unix Shells
 POSIX Shell
 -----------
 
-- Remove a prefix from a variable ('v' in this case): `{LATEST_RELEASE#v}`
+- Remove a prefix from a variable ('v' in this case): `${LATEST_RELEASE#v}`
 - Remove a suffix from a variable ('/' in this case): `${TMPDIR%/}`
 - Unset a function: `unset -f $FUNCTION_NAME`
 
