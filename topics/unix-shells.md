@@ -4,20 +4,159 @@ Unix Shells
 POSIX Shell
 -----------
 
-- Remove a prefix from a variable ('v' in this case): `${LATEST_RELEASE#v}`
-- Remove a suffix from a variable ('/' in this case): `${TMPDIR%/}`
-- Unset a function: `unset -f $FUNCTION_NAME`
+### Remove A Prefix From A Variable
+
+```shell
+VERSION="v1.0.0"
+UNPREFIXED_VERSION="${VERSION#v}"
+
+printf '%s\n' "${UNPREFIXED_VERSION}"
+# >>> 1.0.0
+```
+
+### Remove a Suffix From a Variable
+
+```shell
+URL="https://www.example.com/"
+URL_WITHOUT_TRAILING_SLASH="${URL%/}"
+
+printf '%\n' "${URL_WITHOUT_TRAILING_SLASH}"
+# >>> https://www.example.com
+```
+
+### Unset a Function
+
+```shell
+function example {
+  printf 'Hello world!\n'
+}
+
+example
+# >>> Hello world!
+
+unset -f example
+
+example
+# >>> sh: example: command not found
+```
 
 Z Shell (zsh)
 -------------
 
-- Append to `$PATH:`: `path+=("${$HOME}/.local/bin")`
-- Prepend to `$PATH`: `path=("${$HOME}/.local/bin" $path)`
-- Check if a path is in `$PATH`: `(( $path[(Ie)$HOME/.local/bin] ))`
-- Delete the whole line: <kbd>Ctrl</kbd> + <kbd>U</kbd>
-- Display the attributes and value of all declared variables: `typeset -p`
-- Get a variable type via a parameter expansion flag (`man zshexpn`): `echo "${(t)VARIABLE_NAME}"`
-- Remove duplicates in `$PATH`: `typeset -aU path`
-- Unset a function: `unfunction $FUNCTION_NAME`
-- View the manpage for the built-ins: `man zshbuiltins`
-- View the options manpage: `man zshoptions`
+### Append to `$PATH`
+
+```shell
+print "${PATH}"
+# >>> /usr/bin:/bin:/usr/sbin:/sbin
+
+path+=("/path/to/bin")
+
+export PATH
+
+print "${PATH}"
+# >>> /usr/bin:/bin:/usr/sbin:/sbin:/path/to/bin
+```
+
+### Prepend to `$PATH`
+
+```shell
+print "${PATH}"
+# >>> /usr/bin:/bin:/usr/sbin:/sbin
+
+path=("/path/to/bin" $path)
+
+export PATH
+
+print "${PATH}"
+# >>> /path/to/bin:/usr/bin:/bin:/usr/sbin:/sbin
+```
+
+### Check if a Path Is in `$PATH`
+
+```shell
+path+=("/path/to/bin")
+
+export PATH
+
+(( $path[(Ie)/path/to/bin] )) && print 'Found in path!'
+# >>> Found in path!
+```
+
+### Delete the Whole Line in a Shell Session
+
+<kbd>Ctrl</kbd> + <kbd>U</kbd>
+
+### Display the Attributes and Values of All Declared Variables
+
+```shell
+typeset -p
+# >>> typeset 0=-zsh
+# >>> typeset BOLD=$'\C-[[1m'
+# >>> typeset BUFFER=''
+# >>> ...
+```
+
+### Get a Variable Type via a Parameter Expansion Flag
+
+```shell
+local example="Hello world!"
+
+print "${(t)example}"
+# >>> scalar
+```
+
+### Remove Duplicates in `$PATH`
+
+```shell
+print "${PATH}"
+# >>> /usr/bin:/bin:/usr/sbin:/sbin
+
+path+=("/path/to/bin")
+
+print "${PATH}"
+# >>> /usr/bin:/bin:/usr/sbin:/sbin:/path/to/bin
+
+path+=("/path/to/bin")
+
+print "${PATH}"
+# >>> /usr/bin:/bin:/usr/sbin:/sbin:/path/to/bin:/path/to/bin
+
+typeset -aU path
+
+print "${PATH}"
+# >>> /usr/bin:/bin:/usr/sbin:/sbin:/path/to/bin
+```
+
+### Unset a Function
+
+```shell
+function example() {
+  print 'Hello world!'
+}
+
+example
+# >>> Hello world!
+
+unfunction example
+
+example
+# >>> zsh: command not found: example
+```
+
+### View the Manpage for Built-Ins
+
+```shell
+man zshbuiltins
+```
+
+### View the Manpage for Expansion and Substitution
+
+```shell
+man zshexpn
+```
+
+### View the Options Manpage
+
+```shell
+man zshoptions
+```
