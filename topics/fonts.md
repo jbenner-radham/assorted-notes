@@ -17,6 +17,7 @@ A curated list of nice looking open source and public domain fonts.
 | [JetBrains Mono][JETBRAINS_MONO]   | [SIL Open Font License 1.1][SIL_OFL] |
 | [Lotion][LOTION]                   | [SIL Open Font License 1.1][SIL_OFL] |
 | [Manrope][MANROPE]                 | [SIL Open Font License 1.1][SIL_OFL] |
+| [Maple Mono][MAPLE_MONO]           | [SIL Open Font License 1.1][SIL_OFL] |
 | [Medio][MEDIO]                     | [CC0 1.0 Universal][CC0_1_0]         |
 | [Melete][MELETE]                   | [SIL Open Font License 1.1][SIL_OFL] |
 | [Nacelle][NACELLE]                 | [SIL Open Font License 1.1][SIL_OFL] |
@@ -43,6 +44,7 @@ A curated list of nice looking open source and public domain fonts.
 [JETBRAINS_MONO]: https://www.jetbrains.com/lp/mono/
 [LOTION]: https://font.nina.coffee/
 [MANROPE]: https://web.archive.org/web/20230102090912/manropefont.com
+[MAPLE_MONO]: https://font.subf.dev/en/
 [MEDIO]: https://dotcolon.net/fonts/medio/
 [MELETE]: https://dotcolon.net/fonts/melete/
 [NACELLE]: https://dotcolon.net/fonts/nacelle/
