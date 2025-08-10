@@ -121,6 +121,19 @@ print "${PATH}"
 # >>> /usr/bin:/bin:/usr/sbin:/sbin:/path/to/bin
 ```
 
+### Split a String Using a Parameter Expansion Flag
+
+```sh
+print "${PATH}"
+# >>> /usr/bin:/bin:/usr/sbin:/sbin
+
+print -l "${(s[:])PATH}"
+# >>> /usr/bin
+# >>> /bin
+# >>> /usr/sbin
+# >>> /sbin
+```
+
 ### Unset a Function
 
 ```shell
