@@ -34,7 +34,7 @@ echo 'HELLO WORLD!' | tr '[:upper:]' '[:lower:]'
 ### Unset a Function
 
 ```shell
-function example {
+example() {
   printf 'Hello world!\n'
 }
 
