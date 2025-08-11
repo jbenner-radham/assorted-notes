@@ -24,6 +24,13 @@ printf '%\n' "${URL_WITHOUT_TRAILING_SLASH}"
 # >>> https://www.example.com
 ```
 
+### Transform Uppercase Text to Lowercase
+
+```shell
+echo 'HELLO WORLD!' | tr '[:upper:]' '[:lower:]'
+# >>> hello world!
+```
+
 ### Unset a Function
 
 ```shell
