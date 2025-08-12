@@ -97,6 +97,24 @@ typeset -p
 # >>> ...
 ```
 
+### Dynamically Source Files
+
+```shell
+# The parenthesized characters are called glob qualifiers and do the following:
+#  .: Match only plain files.
+#  N: Set the `NULL_GLOB` option for the current pattern. This will suppress the
+#     error raised when no files match the current pattern.
+#  r: Match only owner-readable files.
+# See: https://zsh.sourceforge.io/Doc/Release/Expansion.html#Glob-Qualifiers
+# Note: The glob won't work if it's quoted.
+for file in $XDG_CONFIG_HOME/zsh/*.zsh(.Nr); do
+  source "${file}"
+done
+
+# Unset the loop variable so it doesn't persist in the shell session.
+unset file
+```
+
 ### Get a Variable Type via a Parameter Expansion Flag
 
 ```shell
