@@ -14,6 +14,12 @@ Keyboard Commands
 
 ### System Wide
 
+<dl>
+  <dt>Delete forward:</dt>
+  <dd><kbd>Fn</kbd> + <kbd>Delete</kbd></dd>
+</dl>
+
+- Delete forward: <kbd>Fn</kbd> + <kbd>Delete</kbd>
 - Home key equivalent: <kbd>Fn</kbd> + <kbd>← Left</kbd>
 - End key equivalent: <kbd>Fn</kbd> + <kbd>→ Right</kbd>
 
