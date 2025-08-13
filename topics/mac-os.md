@@ -15,11 +15,13 @@ Keyboard Commands
 ### System Wide
 
 - Delete forward: <kbd>Fn</kbd> + <kbd>Delete</kbd>
-- Home key equivalent: <kbd>Fn</kbd> + <kbd>← Left</kbd>
 - End key equivalent: <kbd>Fn</kbd> + <kbd>→ Right</kbd>
+- Home key equivalent: <kbd>Fn</kbd> + <kbd>← Left</kbd>
+- Position window in left half of screen: <kbd>Fn</kbd> + <kbd>^ Control</kbd> + <kbd>← Left</kbd>
+- Position window in right half of screen: <kbd>Fn</kbd> + <kbd>^ Control</kbd> + <kbd>→ Right</kbd>
 
-Zsh
----
+Z Shell (zsh)
+-------------
 
 - A system wide configuration is located at `/etc/zshrc`.
 - A system wide `Terminal.app` specific supplemental configuration is located at
