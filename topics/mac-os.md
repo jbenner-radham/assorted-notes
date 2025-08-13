@@ -10,6 +10,12 @@ Keyboard Commands
 ### Finder
 
 - Go to: <kbd>⌘ Command</kbd> + <kbd>⇧ Shift</kbd> + <kbd>G</kbd>
+- Show hidden files: <kbd>⌘ Command</kbd> + <kbd>⇧ Shift</kbd> + <kbd>.</kbd>
+
+### System Wide
+
+- Home key equivalent: <kbd>Fn</kbd> + <kbd>← Left</kbd>
+- End key equivalent: <kbd>Fn</kbd> + <kbd>→ Right</kbd>
 
 Zsh
 ---
