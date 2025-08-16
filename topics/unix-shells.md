@@ -159,6 +159,18 @@ print -l "${(s[:])PATH}"
 # >>> /sbin
 ```
 
+### Unquote a String
+
+```shell
+local example='"Hello world!"'
+
+print "${example}"
+# >>> "Hello world!"
+
+print "${example:Q}"
+# >>> Hello world!
+```
+
 ### Unset a Function
 
 ```shell
