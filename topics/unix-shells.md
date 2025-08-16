@@ -142,7 +142,7 @@ print -l ${(j[:])words}
 
 local separator='=>'
 
-print -l ${(pj.$separator.)words}
+print -l ${(pj[$separator])words}
 # >>> foo=>bar=>baz
 ```
 
