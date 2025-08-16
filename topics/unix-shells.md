@@ -124,6 +124,28 @@ print "${(t)example}"
 # >>> scalar
 ```
 
+### Join an Array Into a String
+
+```shell
+local words=(foo bar baz)
+
+print -l $words
+# >>> foo
+# >>> bar
+# >>> baz
+
+print -l ${(j[ ])words}
+# >>> foo bar baz
+
+print -l ${(j[:])words}
+# >>> foo:bar:baz
+
+local separator='=>'
+
+print -l ${(pj.$separator.)words}
+# >>> foo=>bar=>baz
+```
+
 ### Remove Duplicates in `$PATH`
 
 ```shell
