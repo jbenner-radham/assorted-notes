@@ -134,15 +134,22 @@ print -l $words
 # >>> bar
 # >>> baz
 
+# Join on a space (" ").
 print -l ${(j[ ])words}
 # >>> foo bar baz
 
+# Join on a colon (":").
 print -l ${(j[:])words}
 # >>> foo:bar:baz
 
 local separator='=>'
 
+# Using a separator variable.
 print -l ${(pj[$separator])words}
+# >>> foo=>bar=>baz
+
+# Alternate separator variable syntax.
+print -l ${(pj.$separator.)words}
 # >>> foo=>bar=>baz
 ```
 
