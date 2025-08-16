@@ -222,6 +222,12 @@ example
 man zshbuiltins
 ```
 
+### View the Manpage for the Command Line Editor
+
+```shell
+man zshzle
+```
+
 ### View the Manpage for Expansion and Substitution
 
 ```shell
