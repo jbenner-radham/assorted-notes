@@ -188,6 +188,16 @@ print -l "${(s[:])PATH}"
 # >>> /sbin
 ```
 
+### Escape a String
+
+```shell
+local example='/Users/user/Library/Application Support'
+
+# We can't use `print` here because it will remove the escape sequences.
+echo ${example:q}
+# >>> /Users/user/Library/Application\ Support
+```
+
 ### Unquote a String
 
 ```shell
